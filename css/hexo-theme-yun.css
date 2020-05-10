@@ -1625,7 +1625,7 @@ td {
   left: 0;
   width: 20rem;
   background: #fff;
-  background-image: url("images/4.jpg");
+  background-image: url("/images/4.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom 1rem center;
