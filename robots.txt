@@ -1,0 +1,5 @@
+# hexo robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://allmainashley.github.io/sitemap.xml
