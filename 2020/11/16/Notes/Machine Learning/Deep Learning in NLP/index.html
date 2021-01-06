@@ -1,0 +1,346 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#0078E7"><meta name="author" content="程海盐"><meta name="copyright" content="程海盐"><meta name="generator" content="Hexo 5.2.0"><meta name="theme" content="hexo-theme-yun"><title>Deep Learning in NLP | Ashley</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&amp;display=swap" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/star-markdown-css@0.1.22/dist/yun/yun-markdown.min.css"><script src="//at.alicdn.com/t/font_1140697_ed8vp4atwoj.js" async></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"><script defer src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/copy-tex.min.css"><script defer src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/copy-tex.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/auto-render.min.js"></script><script>document.addEventListener("DOMContentLoaded", function() {
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\(", right: "\\)", display: false},
+      {left: "\\[", right: "\\]", display: true}
+    ]
+  });
+});</script><script src="https://cdn.jsdelivr.net/npm/pjax@latest/pjax.min.js" defer></script><script src="/js/pjax.js" defer></script><script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script><link rel="shortcut icon" type="image/svg+xml" href="/yun.svg"><link rel="mask-icon" href="/yun.svg" color="#0078E7"><link rel="alternate icon" href="/yun.ico"><link rel="preload" href="/css/hexo-theme-yun.css" as="style"><link rel="preload" href="/js/utils.js" as="script"><link rel="preload" href="/js/hexo-theme-yun.js" as="script"><link rel="prefetch" href="/js/sidebar.js" as="script"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="stylesheet" href="/css/hexo-theme-yun.css"><script id="yun-config">
+    const Yun = window.Yun || {};
+    window.CONFIG = {"hostname":"allmainashley.github.io","root":"/","title":"盐姜葱花鱼","version":"1.3.0","mode":"auto","copycode":true,"anonymous_image":"https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/avatar/none.jpg","say":{"api":"https://v1.hitokoto.cn","hitokoto":true},"local_search":{"path":"/search.xml"},"fireworks":{"colors":["102, 167, 221","62, 131, 225","33, 78, 194"]}};
+  </script><meta name="description" content="Reading notes of《Deep Learning in NLP》✨ It is almost about natural language processing functions explainations.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Deep Learning in NLP">
+<meta property="og:url" content="https://allmainashley.github.io/2020/11/16/Notes/Machine%20Learning/Deep%20Learning%20in%20NLP/index.html">
+<meta property="og:site_name" content="Ashley">
+<meta property="og:description" content="Reading notes of《Deep Learning in NLP》✨ It is almost about natural language processing functions explainations.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/AllMainAshley/CDN@master/images/20201116213953.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/AllMainAshley/CDN@master/images/20201116214144.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/AllMainAshley/CDN@master/images/20201116214304.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/AllMainAshley/CDN@master/images/20201116214234.png">
+<meta property="article:published_time" content="2020-11-16T07:14:34.429Z">
+<meta property="article:modified_time" content="2020-11-16T07:14:34.429Z">
+<meta property="article:author" content="程海盐">
+<meta property="article:tag" content="Tensorflow">
+<meta property="article:tag" content="NLP">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/AllMainAshley/CDN@master/images/20201116213953.png"><script src="/js/ui/mode.js"></script></head><body><script defer src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script defer src="/js/ui/fireworks.js"></script><canvas class="fireworks"></canvas><div class="container"><a class="sidebar-toggle hty-icon-button" id="menu-btn"><div class="hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></div></a><div class="sidebar-toggle sidebar-overlay"></div><aside class="sidebar"><script src="/js/sidebar.js"></script><ul class="sidebar-nav"><li class="sidebar-nav-item sidebar-nav-toc hty-icon-button sidebar-nav-active" data-target="post-toc-wrap" title="Table of Contents"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-list-ordered"></use></svg></li><li class="sidebar-nav-item sidebar-nav-overview hty-icon-button" data-target="site-overview-wrap" title="Overview"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-passport-line"></use></svg></li></ul><div class="sidebar-panel" id="site-overview-wrap"><div class="site-info fix-top"><a class="site-author-avatar" href="/about/" title="程海盐"><img width="96" loading="lazy" src="/images/1.jpg" alt="程海盐"><span class="site-author-status" title="Fall in love with lsh.">💘</span></a><div class="site-author-name"><a href="/about/">程海盐</a></div><a class="site-name" href="/about/site.html">Ashley</a><sub class="site-subtitle">It might be hard,but it's worthy.</sub><div class="site-desciption">喜欢就坚持吧</div></div><nav class="site-state"><a class="site-state-item hty-icon-button icon-home" href="/" title="Home"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-home-4-line"></use></svg></span></a><div class="site-state-item"><a href="/archives/" title="Archives"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-archive-line"></use></svg></span><span class="site-state-item-count">14</span></a></div><div class="site-state-item"><a href="/categories/" title="Categories"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-folder-2-line"></use></svg></span><span class="site-state-item-count">6</span></a></div><div class="site-state-item"><a href="/tags/" title="Tags"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="site-state-item-count">14</span></a></div><a class="site-state-item hty-icon-button" href="/about/#comment" title="留言板"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-clipboard-line"></use></svg></span></a></nav><hr style="margin-bottom:0.5rem"><div class="links-of-author"><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://wpa.qq.com/msgrd?v=3&amp;uin=1145777605&amp;site=qq&amp;menu=yes" title="QQ" target="_blank" style="color:#12B7F5"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-qq-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://github.com/AllMainAshley" title="GitHub" target="_blank" style="color:#6e5494"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-github-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://music.163.com/#/user/home?id=136665109" title="网易云音乐" target="_blank" style="color:#C10D0C"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-netease-cloud-music-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="/atom.xml" title="RSS" target="_blank" style="color:orange"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-rss-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://space.bilibili.com/378853502" title="哔哩哔哩" target="_blank" style="color:#FF8EB3"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-bilibili-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://www.yuque.com/allmainashley" title="语雀" target="_blank" style="color:#3CB371"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-yuque"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="mailto:ashleyallmain@qq.com" title="E-Mail" target="_blank" style="color:#8E71C1"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-mail-line"></use></svg></a></div><hr style="margin:0.5rem 1rem"><div class="links"><a class="links-item hty-icon-button" href="/links/" title="我的小伙伴们" style="color:dodgerblue"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-genderless-line"></use></svg></a><a class="links-item hty-icon-button" href="/girls/" title="喜欢的女孩子" style="color:hotpink"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-women-line"></use></svg></a></div><br><a class="links-item hty-icon-button" id="toggle-mode-btn" href="javascript:;" title="Mode" style="color: #f1cb64"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-contrast-2-line"></use></svg></a></div><div class="sidebar-panel sidebar-panel-active" id="post-toc-wrap"><div class="post-toc"><div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Data-Preparation"><span class="toc-number">1.</span> <span class="toc-text">Data Preparation</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Summary"><span class="toc-number">1.1.</span> <span class="toc-text">Summary</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Additional-Text-Cleaning-Considerations"><span class="toc-number">1.2.</span> <span class="toc-text">Additional Text Cleaning Considerations</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Bag-of-Words-Model%EF%BC%88Bow%EF%BC%89"><span class="toc-number">2.</span> <span class="toc-text">Bag-of-Words Model（Bow）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="toc-number">2.1.</span> <span class="toc-text">优缺点</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Prepare-Data-With-Keras"><span class="toc-number">3.</span> <span class="toc-text">Prepare Data With Keras</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Bags-of-Words"><span class="toc-number">4.</span> <span class="toc-text">Bags of Words</span></a></li></ol></div></div></div></aside><main class="sidebar-translate" id="content"><div id="post"><article class="post-block" itemscope itemtype="https://schema.org/Article"><link itemprop="mainEntityOfPage" href="https://allmainashley.github.io/2020/11/16/Notes/Machine%20Learning/Deep%20Learning%20in%20NLP/"><span hidden itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="程海盐"><meta itemprop="description"></span><span hidden itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="Ashley"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">Deep Learning in NLP</h1><div class="post-meta"><div class="post-time" style="display:inline-block"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-calendar-line"></use></svg></span> <time title="Created: 2020-11-16 15:14:34" itemprop="dateCreated datePublished" datetime="2020-11-16T15:14:34+08:00">2020-11-16</time></div><div class="post-classify"><span class="post-category"> <span class="post-meta-item-icon" style="margin-right:3px;"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-folder-line"></use></svg></span><span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a class="category" href="/categories/Notes/" style="--text-color:var(--hty-text-color)" itemprop="url" rel="index"><span itemprop="text">Notes</span></a></span> > <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a class="category" href="/categories/Notes/Machine-Learning/" style="--text-color:var(--hty-text-color)" itemprop="url" rel="index"><span itemprop="text">Machine Learning</span></a></span></span><span class="post-tag"><span class="post-meta-divider">-</span><a class="tag" href="/tags/Tensorflow/" style="--text-color:var(--hty-text-color)"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="tag-name">Tensorflow</span></a><a class="tag" href="/tags/NLP/" style="--text-color:var(--hty-text-color)"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="tag-name">NLP</span></a></span></div></div></header><section class="post-body" itemprop="articleBody"><div class="post-content markdown-body" style="--smc-primary:#0078E7;"><p> Reading notes of《Deep Learning in NLP》✨</p>
+<p>It is almost about natural language processing functions explainations.</p>
+<a id="more"></a>
+
+<h1 id="Data-Preparation"><a href="#Data-Preparation" class="headerlink" title="Data Preparation"></a>Data Preparation</h1><ul>
+<li><p><strong>Split by Whitespace</strong></p>
+<p>文章被空格分开；</p>
+<p>标点符号和前一个单词连在一起（比如 <code>&#39;dream.&#39;</code>）；</p>
+<p>**<font color=indianre>优点：</font>**部分标点符号被保留（比如<code>&quot;wasn&#39;t&quot;</code>和<code>&#39;armour-like&#39;</code>）</p>
+<p>**<font color=tomato>缺点:</font>**缩写词被分开（比如<code>What&#39;s </code>变为<code>&#39;&quot;What\&#39;s&#39;</code>）；</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">text=file.read()</span><br><span class="line">words=text.split()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Select Words</strong></p>
+<p>文章以单词形式被分开；</p>
+<p>单词去除了标点符号；</p>
+<p>缺点：<code>armour-like</code>变成两个词 <code>&#39;armour&#39;,&#39;like&#39; </code>、<code>What&#39;s</code>变成<code>&#39;What&#39;,&#39;s&#39;</code>；</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line">words=re.split(<span class="string">r&#x27;\W+&#x27;</span>,text)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Split by Whitespace and Remove Punctuation</strong></p>
+<p>文章被空格分开，并去除标点符号。需要用到<code>string.punctuation</code>,打印的结果是 <font color=LighCoral>*<em>!”#$%&amp;’()</em>+,-./:;&lt;=&gt;?@[]^_`{|}~**</font></p>
+<p><code>What&#39;s</code>变为<code>&#39;Whats&#39;</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">words = text.split()</span><br><span class="line">re_punc=re.compile(<span class="string">&#x27;[%s]&#x27;</span>%re.escape(string.punctuation))</span><br><span class="line">stripped=[re_punc.sub(<span class="string">&#x27;&#x27;</span>,w) <span class="keyword">for</span> w <span class="keyword">in</span> words]</span><br></pre></td></tr></table></figure>
+
+<p>有些字符无法被打印，我们可以用同样的方法筛去这些字符。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">words = text.split()</span><br><span class="line">re_print=re.compile(<span class="string">&#x27;[%s]&#x27;</span>%re.escape(string.printable))</span><br><span class="line">stripped=[re_print.sub(<span class="string">&#x27;&#x27;</span>,w) <span class="keyword">for</span> w <span class="keyword">in</span> words]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Normalizing Case</strong></p>
+<p>把所有词转换为相同形式（小写）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">words = text.split()</span><br><span class="line">words = [word.lower() <span class="keyword">for</span> word <span class="keyword">in</span> words]</span><br><span class="line">print(words[:<span class="number">100</span>])</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>sent_tokenize</strong>（使用nltk库）</p>
+<p>文章以句子的形式划分。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> nltk <span class="keyword">import</span> sent_tokenize</span><br><span class="line">sentences = sent_tokenize(text)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>word_tokenize</strong></p>
+<p>文章以词的形式划分（有些标点符号也被划分成立token，但我们可以滤除它们）。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> nltk <span class="keyword">import</span> word_tokenize</span><br><span class="line">tokens = word_tokenize(text)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Filter Out Punctuation</strong><br>可以通过遍历token’，并只保留那些是字母的token（python内置函数<code>isalpha()</code>）。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tokens = word_tokenize(text)</span><br><span class="line">words = [word <span class="keyword">for</span> word <span class="keyword">in</span> tokens <span class="keyword">if</span> word.isalpha()]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Filter out Stop Words (and Pipeline)</strong></p>
+<p>stop words对词组深层含义词没什么帮助，它们通常是<code>the</code>、<code>a</code>、<code>is</code>等等。NLTK提供了一系列不同语言版本的停用词，它们可以被这样载入：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> nltk.corpus <span class="keyword">import</span> stopwords</span><br><span class="line">stop_words = stopwords.words(<span class="string">&#x27;english</span></span><br></pre></td></tr></table></figure>
+
+<p>它们打印出来都是小写，所以在filter out前记得把要处理的文本也变为小写。</p>
+</li>
+<li><p><strong>Stem Words</strong></p>
+<p>Stemming是指将每个词还原为词根或词基的过程。主流的老办法是Porter Stemming algorithm，可在nltk中载入PorterStemmer 类后使用：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">porter=PorterStemmer()</span><br><span class="line">stemmed=[porter.stem(word) <span class="keyword">for</span> word <span class="keyword">in</span> tokens]</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><ul>
+<li>Load the raw text. </li>
+<li>Split into tokens. </li>
+<li>Convert to lowercase. </li>
+<li>Remove punctuation from each token. </li>
+<li>Filter out remaining tokens that are not alphabetic. </li>
+<li>Filter out tokens that are stop words</li>
+</ul>
+<h2 id="Additional-Text-Cleaning-Considerations"><a href="#Additional-Text-Cleaning-Considerations" class="headerlink" title="Additional Text Cleaning Considerations"></a>Additional Text Cleaning Considerations</h2><ul>
+<li>Handling large documents and large collections of text documents that do not fit into memory. </li>
+<li>Extracting text from markup like HTML, PDF, or other structured document formats. </li>
+<li>Transliteration of characters from other languages into English. </li>
+<li>Decoding Unicode characters into a normalized form, such as UTF8. </li>
+<li>Handling of domain specific words, phrases, and acronyms. </li>
+<li>Handling or removing numbers, such as dates and amounts. </li>
+<li>Locating and correcting common typos and misspellings. </li>
+<li>And much more…</li>
+</ul>
+<h1 id="Bag-of-Words-Model（Bow）"><a href="#Bag-of-Words-Model（Bow）" class="headerlink" title="Bag-of-Words Model（Bow）"></a>Bag-of-Words Model（Bow）</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input:document Output: a class label</span><br><span class="line">convert documents to fixed-length vectors, the length is the length of the words,the value is a count or frequency of each word in encoded document.</span><br><span class="line">Each word should be encoded as a unique number</span><br></pre></td></tr></table></figure>
+
+<p>编码不关心顺序，只关心频率，所以有很多方法可以进行编码，sklearn提供了如下三种编码方案。</p>
+<ul>
+<li><p><strong>Word Counts with CountVectorizer</strong></p>
+<ul>
+<li><p>Create <font color=salmon>an instance of the CountVectorizer class</font>. </p>
+</li>
+<li><p>Call the<font color=salmon> fit() function </font>in order to learn a vocabulary from one or more documents. </p>
+</li>
+<li><p>Call the <font color=salmon>transform() function </font>on one or more documents as needed to encode each as a vector.</p>
+</li>
+</ul>
+<blockquote>
+<p>An encoded vector is returned with<font color=chocolate> a length of the entire vocabulary</font> and <font color=chocolate> an integer count for the number of times each word appeared in the document</font>. Because these vectors will contain a lot of zeros, we call them <font color=Crimson><strong>sparse</strong></font>.</p>
+</blockquote>
+<p>使用<code>scipy.sparce</code>可以处理这些系数向量。调用transform()返回的向量将是稀疏向量，你可以通过调用toarray()函数，将它们转换回NumPy数组来查看，并更好地理解发生了什么事。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.feature_extraction.text <span class="keyword">import</span> CountVectorizer</span><br><span class="line"><span class="comment"># list of text documents</span></span><br><span class="line">text = [<span class="string">&quot;The quick brown fox jumped over the lazy dog.&quot;</span>]</span><br><span class="line"><span class="comment"># create the transform</span></span><br><span class="line">vectorizer = CountVectorizer()</span><br><span class="line"><span class="comment"># tokenize and build vocab</span></span><br><span class="line">vectorizer.fit(text)</span><br><span class="line"><span class="comment"># summarize</span></span><br><span class="line">print(vectorizer.vocabulary_)</span><br><span class="line"><span class="comment"># encode document</span></span><br><span class="line">vector = vectorizer.transform(text)</span><br><span class="line"><span class="comment"># summarize encoded vector</span></span><br><span class="line">print(vector.shape)</span><br><span class="line">print(type(vector))</span><br><span class="line">print(vector.toarray())</span><br></pre></td></tr></table></figure>
+
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ptint(vectorizer.vocabulary_)</span><br><span class="line">print(vector.shape)</span><br><span class="line">print(type(vector))</span><br><span class="line">print(vector.toarray())</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#39;dog&#39;: 1, &#39;fox&#39;: 2, &#39;over&#39;: 5, &#39;brown&#39;: 0, &#39;quick&#39;: 6, &#39;the&#39;: 7, &#39;lazy&#39;: 4, &#39;jumped&#39;: 3&#125;</span><br><span class="line">(1, 8)</span><br><span class="line">&lt;class &#39;scipy.sparse.csr.csr_matrix&#39;&gt;</span><br><span class="line">[[1 1 1 1 1 1 1 2]]</span><br></pre></td></tr></table></figure>
+
+<p>所有单词都是默认小写，标点符号已被去掉，向量长度为8，编码向量是稀疏矩阵。</p>
+<p>可以用同一个vectorizer去计算不同文章的sparse vector。比如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">text2=[<span class="string">&quot;the puppy&quot;</span>]</span><br><span class="line">vector2=vectorizer.transform(text2)</span><br><span class="line">print(vector2.toarray())</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Word Frequencies with TfidfVectorizer</strong></p>
+<p>有些词，比如the，出现次数太多了以及就不大了。所以，一种替代方案是计算词频，一个主流办法是 TF-IDF（即Term Frequency - Inverse Document Frequency）</p>
+<ul>
+<li><strong>Term Frequency</strong>: This summarizes how often a given word appears within a document. </li>
+<li><strong>Inverse Document Frequency</strong>: This downscales words that appear a lot across documents.（这是对文档中出现频率较高的词进行降频）</li>
+</ul>
+<p>TF-IDF是词频分数，尽量突出的是比较有意思的词，比如在一篇文档中频繁出现，但在不同文档中没有出现。</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/31197209">link</a></p>
+<blockquote>
+<p>第一步，计算词频</p>
+<p><img src="https://cdn.jsdelivr.net/gh/AllMainAshley/CDN@master/images/20201116213953.png" loading="lazy"></p>
+<p>考虑到文章有长短之分，为了便于不同文章的比较，进行”词频”标准化.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/AllMainAshley/CDN@master/images/20201116214144.png" loading="lazy"></p>
+<p>第二步，计算逆文档频率：</p>
+<p>这时，需要一个语料库（corpus），用来模拟语言的使用环境。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/AllMainAshley/CDN@master/images/20201116214304.jpg" loading="lazy"></p>
+<p>如果一个词越常见，那么分母就越大，逆文档频率就越小越接近0。分母之所以要加1，是为了避免分母为0（即所有文档都不包含该词）。log表示对得到的值取对数。</p>
+<p>第三步，计算TF-IDF：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/AllMainAshley/CDN@master/images/20201116214234.png" loading="lazy"></p>
+<p>可以看到，TF-IDF与一个词在文档中的出现次数成正比，与该词在整个语言中的出现次数成反比。所以，自动提取关键词的算法就很清楚了，就是<strong>计算出文档的每个词的TF-IDF值，然后按降序排列，取排在最前面的几个词。</strong></p>
+<h2 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a><strong>优缺点</strong></h2><p>TF-IDF的优点是简单快速，而且容易理解。缺点是有时候用<strong>词频</strong>来衡量文章中的一个词的重要性不够全面，有时候重要的词出现的可能不够多，而且这种计算无法体现位置信息，无法体现词在上下文的重要性。如果要体现词的上下文结构，那么你可能需要使用word2vec算法来支持。</p>
+</blockquote>
+</li>
+<li><p><strong>HashingVectorizer</strong></p>
+<p>vocabulary可能很大，所以可以使用hash的方法把他们转换为装束，这样词汇也不是定长的了，缺点是hash是单向的，也就没有办法把他们从编码转换成词语了。作者想想有一些启发式的方法，你可以根据估计的词汇量大小来挑选哈希长度和碰撞的概率（例如75%的负载系数）。</p>
+<p>编码文档的值默认对应于-1到1范围内的归一化字数，但可以通过改变默认配置使其成为简单的整数。</p>
+</li>
+</ul>
+<h1 id="Prepare-Data-With-Keras"><a href="#Prepare-Data-With-Keras" class="headerlink" title="Prepare Data With Keras"></a>Prepare Data With Keras</h1><p> Keras provides the text to word sequence() function that you can use to split text into a list of words. By default, this function automatically does 3 things: </p>
+<ul>
+<li>Splits words by space. </li>
+<li>Encoding with one hot </li>
+<li>Filters out punctuation. </li>
+<li>Converts text to lowercase (lower=True)</li>
+</ul>
+<hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> keras.preprocessing.text <span class="keyword">import</span> text_to_word_sequence</span><br><span class="line"><span class="keyword">from</span> keras.preprocessing.text <span class="keyword">import</span> one_hot</span><br><span class="line"></span><br><span class="line">text=<span class="string">&#x27;The quick brown fox jumped over the lazy dog.&#x27;</span></span><br><span class="line"><span class="comment"># words=text_to_word_sequence(text)</span></span><br><span class="line"><span class="comment"># vocab_size=len(words)</span></span><br><span class="line"><span class="comment"># print(vocab_size)</span></span><br><span class="line"></span><br><span class="line">words=set(text_to_word_sequence(text))  <span class="comment"># 去除重复的单词</span></span><br><span class="line"><span class="comment"># print(text_to_word_sequence(text))</span></span><br><span class="line"><span class="comment"># print(words)</span></span><br><span class="line">vocab_size=len(words)</span><br><span class="line">print(vocab_size)</span><br><span class="line">result=one_hot(text,round(vocab_size*<span class="number">1.3</span>))  <span class="comment"># ?</span></span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<ul>
+<li><strong>hashing_trick</strong></li>
+</ul>
+<p>A limitation of integer and count base encodings is that they must maintain a vocabulary of words and their mapping to integers.An alternative to this approach is to use a one-way hash function to convert words to integers.</p>
+<p>Keras provides the hashing trick() function that tokenizes and then integer encodes the document, just like the one hot() function.</p>
+<hr>
+<ul>
+<li><p><strong>Tokenizer</strong></p>
+<p>Once fit, the Tokenizer provides 4 attributes that you can use to query what has been learned about your documents: </p>
+<ul>
+<li>word counts: A dictionary mapping of words and their occurrence counts when the Tokenizer was fit. </li>
+<li>word docs: A dictionary mapping of words and the number of documents that reach appears in. </li>
+<li>word index: A dictionary of words and their uniquely assigned integers.</li>
+<li>document count: A dictionary mapping and the number of documents they appear in calculated during the fit.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>The texts to matrix() function on the Tokenizer can be used to create one vector per document provided per input. The length of the vectors is the total size of the vocabulary. </p>
+<ul>
+<li>binary: Whether or not each word is present in the document. This is the default. </li>
+<li>count: The count of each word in the document. </li>
+<li>tfidf: The Text Frequency-Inverse DocumentFrequency (TF-IDF) scoring for each word in the document. </li>
+<li>freq: The frequency of each word as a ratio of words within each document. We can put all of this together with a worked example</li>
+</ul>
+<hr>
+<ul>
+<li>A vocabulary of known words. </li>
+<li>A measure of the presence of known words.</li>
+</ul>
+<h1 id="Bags-of-Words"><a href="#Bags-of-Words" class="headerlink" title="Bags of Words"></a>Bags of Words</h1><p><strong>Counter</strong>, which is a dictionary mapping of words and their count that allows us to easily update and query</p>
+<hr>
+<p>texts to matrix() </p>
+<ul>
+<li>binary 被标记为0或1</li>
+<li>count 每个单词出现次数</li>
+<li>tfidf 词频和逆词频</li>
+<li>freq 词频</li>
+</ul>
+<hr>
+<p><strong>Word Embedding</strong></p>
+<p>用向量空间表示词语。</p>
+<hr>
+<p>Word2Vec模型中，主要有Skip-Gram和CBOW两种模型，从直观上理解，Skip-Gram是给定input word来预测上下文。而CBOW是给定上下文，来预测input word。本篇文章仅讲解Skip-Gram模型。</p>
+<p>Both models are focused on learning about words given their local usage context, where the<br>context is defined by a window of neighboring words. This window is a configurable parameter<br>of the model.<br>The size of the sliding window has a strong effect on the resulting vector similarities.<br>Large windows tend to produce more topical similarities […], while smaller windows<br>tend to produce more functional and syntactic similarities.</p>
+<hr>
+<p><strong>Embedding Layer</strong></p>
+<p>input dim: This is the size of the vocabulary in the text data.</p>
+<p>output dim: This is the size of the vector space in which words will be embedded.</p>
+<p>input length: This is the length of input sequences.</p>
+<p>The output of the Embedding layer is a 2D vector with one embedding for each word in the input sequence of words (input document). If you wish to connect a Dense layer directly to an Embedding layer, you must first flatten the 2D output matrix to a 1D vector using the Flatten layer. Now, let’s see how we can use an Embedding layer in practice.</p>
+<hr>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/55412623">link: text_to sequences</a></p>
+<p><code>texts_to_sequences</code>输出的是根据对应关系输出的向量序列，是不定长的，跟句子的长度有关系。</p>
+<ul>
+<li>word_counts：词频统计结果</li>
+<li>word_index：词和index的对应关系</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> keras.preprocessing.text <span class="keyword">import</span> Tokenizer</span><br><span class="line">text1=<span class="string">&#x27;Some ThING to eat !&#x27;</span></span><br><span class="line">text2=<span class="string">&#x27;some thing to drink .&#x27;</span></span><br><span class="line">texts=[text1,text2]</span><br><span class="line">print(texts)</span><br><span class="line"><span class="comment">#out:[&#x27;Some ThING to eat !&#x27;, &#x27;some thing to drink .&#x27;]</span></span><br><span class="line">tokenizer = Tokenizer(num_words=<span class="number">100</span>) <span class="comment">#num_words:None或整数,处理的最大单词数量。少于此数的单词丢掉</span></span><br><span class="line">tokenizer.fit_on_texts(texts)</span><br><span class="line">print( tokenizer.word_counts) </span><br><span class="line"><span class="comment">#out:OrderedDict([(&#x27;some&#x27;, 2), (&#x27;thing&#x27;, 2), (&#x27;to&#x27;, 2), (&#x27;eat&#x27;, 1), (&#x27;drink&#x27;, 1)])</span></span><br><span class="line">print( tokenizer.word_index) </span><br><span class="line"><span class="comment">#out:&#123;&#x27;some&#x27;: 1, &#x27;thing&#x27;: 2, &#x27;to&#x27;: 3, &#x27;eat&#x27;: 4, &#x27;drink&#x27;: 5&#125;</span></span><br><span class="line">sequences = tokenizer.texts_to_sequences(texts)</span><br><span class="line">word_index = tokenizer.word_index</span><br><span class="line">print(sequences)</span><br><span class="line"><span class="comment">#out:[[1, 2, 3, 4], [1, 2, 3, 5]] 转换为序列，注意这里句子等长，所以输出一样，但是不等长句子输出的长度是不一样的</span></span><br><span class="line">print(<span class="string">&#x27;Found %s unique tokens.&#x27;</span> % len(word_index))</span><br><span class="line"><span class="comment">#out:Found 5 unique tokens.</span></span><br></pre></td></tr></table></figure>
+
+<p><code>pad_sequences</code>,对上面生成的不定长序列进行补全。可以手动设定每个句子的最大长度参数，大于这个长度截断，小于这个长度填充。<strong>注意</strong>：默认补全和截断都是在句子前面进行填充和截断。这里是用0进行填充，也就是空格，这也是为什么上面序列index起始是1的原因。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#接上面的代码</span></span><br><span class="line">SEQ_LEN = <span class="number">10</span></span><br><span class="line">data = pad_sequences(sequences, maxlen=SEQ_LEN)</span><br><span class="line">print(data)</span><br><span class="line"><span class="comment">#out:[[0 0 0 0 0 0 1 2 3 4]</span></span><br><span class="line"><span class="comment"># [0 0 0 0 0 0 1 2 3 5]]</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><code>texts_to matrix</code>：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#（也可以直接得到 one-hot 二进制表示。）这个分词器也支持除 one-hot 编码外的其他向量化模式</span></span><br><span class="line">one_hot_results = tokenizer.texts_to_matrix(samples, mode=<span class="string">&#x27;binary&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><strong>Summary</strong></p>
+<ul>
+<li>Embedding层有一系列整数序列，可以使用更加复杂的词袋模型。Keras提供了one hot函数，对每个词创建了hash值。<code>Embedding(vocab_size, 8, input_length=max_length)</code> 该Embedding层有一个大小为50的vocabulary，和一个大小为4的input，输出词向量的维度是8。如果要把Embedding层放入Dense里，则需要把max_length个8维向量Flatten() 展平，再存入Dense层中。</li>
+</ul>
+<blockquote>
+<p><code>Embedding(input_dim, output_dim, embeddings_initializer=&#39;uniform&#39;, embeddings_regularizer=None, activity_regularizer=None, embeddings_constraint=None, mask_zero=False, input_length=None)</code></p>
+<ul>
+<li><strong>input_dim</strong>: int &gt; 0。词汇表大小， 即，最大整数 index + 1。</li>
+<li><strong>output_dim</strong>: int &gt;= 0。词向量的维度。</li>
+<li><strong>embeddings_initializer</strong>: <code>embeddings</code> 矩阵的初始化方法 (详见 <a target="_blank" rel="noopener" href="https://keras.io/zh/initializers/">initializers</a>)。</li>
+<li><strong>embeddings_regularizer</strong>: <code>embeddings</code> matrix 的正则化方法 (详见 <a target="_blank" rel="noopener" href="https://keras.io/zh/regularizers/">regularizer</a>)。</li>
+<li><strong>embeddings_constraint</strong>: <code>embeddings</code> matrix 的约束函数 (详见 <a target="_blank" rel="noopener" href="https://keras.io/zh/constraints/">constraints</a>)。</li>
+<li><strong>mask_zero</strong>: 是否把 0 看作为一个应该被遮蔽的特殊的 “padding” 值。 这对于可变长的 <a target="_blank" rel="noopener" href="https://keras.io/zh/layers/recurrent/">循环神经网络层</a> 十分有用。 如果设定为 <code>True</code>，那么接下来的所有层都必须支持 masking，否则就会抛出异常。 如果 mask_zero 为 <code>True</code>，作为结果，索引 0 就不能被用于词汇表中 （input_dim 应该与 vocabulary + 1 大小相同）。</li>
+<li><strong>input_length</strong>: 输入序列的长度，当它是固定的时。 如果你需要连接 <code>Flatten</code> 和 <code>Dense</code> 层，则这个参数是必须的 （没有它，dense 层的输出尺寸就无法计算）。</li>
+</ul>
+</blockquote>
+<p><code>tokenizer.texts_to_sequences()</code>：编码为整数向量序列</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Gobsd/article/details/56485177">numpy中array和asarray的区别</a></p>
+<hr>
+<p>无监督预训练word vectors在NLP中效果很好</p>
+<p>对于文本分类任务，使用CNN的预训练静态word vectors做得很好。</p>
+<hr>
+<p>A standard deep learning model for text classification and sentiment analysis uses a word embedding layer and one-dimensional convolutional neural network</p>
+<p><strong>N-gram是直接统计不同的N个词之间组合在一起的概率</strong></p>
+<p><strong>CNN是通过学习得到不同词组合的每个kernel的权重，加权和来达到某种分类或者其他目的</strong></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/yizhuanlu9607/article/details/78084266">‘r’ 和 ‘rt’、’w’ 和 ‘wt’的区别</a><br>r：Python  将会按照编码格式进行解析，read() 操作返回的是str</p>
+<p>rb：也即 binary  mode，read()  操作返回的是bytes</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/xgh1951/article/details/80392411">python中dump 和dumps load和loads的区别</a></p>
+<p> 除了文档说的话，没有什么可添加的。如果要将JSON转储到文件/套接字或其他文件中，则应使用<code>dump()</code>。如果只需要它作为字符串（用于打印，解析等），则使用<code>dumps()</code>（转储字符串）<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/36059194/what-is-the-difference-between-json-dump-and-json-dumps-in-python">link</a></p>
+<hr>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/sinat_34474705/article/details/74458605">numpy.array</a></p>
+<ul>
+<li>Python中提供了list容器，可以当作数组使用。但列表中的元素可以是任何对象，因此列表中保存的是对象的指针，这样一来，为了保存一个简单的列表[1,2,3]。就需要三个指针和三个整数对象。对于数值运算来说，这种结构显然不够高效。</li>
+<li>Python虽然也提供了array模块，但其只支持一维数组，不支持多维数组，也没有各种运算函数。因而不适合数值运算。</li>
+<li>NumPy的出现弥补了这些不足。</li>
+</ul>
+<hr>
+<ul>
+<li><p>什么是n-gram模型？<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/32829048">link</a></p>
+<p>文本里面的内容按照字节进行大小为N的滑动窗口操作，形成了长度是N的字节片段序列。</p>
+<blockquote>
+<p> 该模型基于这样一种假设，第N个词的出现只与前面N-1个词相关，而与其它任何词都不相关，整句的概率就是各个词出现概率的乘积。这些概率可以通过直接从语料中统计N个词同时出现的次数得到。常用的是二元的Bi-Gram和三元的Tri-Gram。</p>
+</blockquote>
+<p>常见应用：搜索引擎（Google或者Baidu）、或者输入法的猜想或者提示</p>
+</li>
+</ul>
+<p>texts_to_sequences</p>
+<p>texts_to_matrix</p>
+<hr>
+<p>no formal specifications</p>
+<p>An alternative approach to specifying the model of the language is to learn it from examples.</p>
+<p>较简单的模型可能会看一个短词序列的上下文，而较大的模型可能会在句子或段落的层次上工作。最常见的是，语言模型在词的水平。</p>
+<p>Language modeling is the art of determining the probability of a sequence of words</p>
+<p>语言模型很重要。</p>
+<p>Neural Language Model 比经典方法更好 when models are incorporated into larger models on challenging tasks like speech recognition and machine translation。key reason：the method’s ability to generalize.</p>
+<p>通过以下方式解决n-gram数据稀疏性问题 将单词参数化为向量（单词嵌入），并将其作为输入到 一个神经网络。</p>
+<p>n-gram？</p>
+<p>distributed representation approach</p>
+<ol>
+<li>将词汇中的每个单词与分布式单词特征向量关联起来。</li>
+<li>用特征向量来表示词序列的联合概率函数，其特征向量为这些词的顺序。</li>
+<li>同时学习单词特征向量和概率函数。</li>
+</ol>
+</div><div id="reward-container"><span class="hty-icon-button button-glow" id="reward-button" title="Donate" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === &quot;none&quot;) ? &quot;block&quot; : &quot;none&quot;;"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-hand-coin-line"></use></svg></span><div id="reward-comment">I'm so cute. Please give me money.</div><div id="qr" style="display:none;"><div style="display:inline-block"><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/alipay-qrcode.jpg"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/alipay-qrcode.jpg" alt="支付宝" title="支付宝"></a><div><span style="color:#00A3EE"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-alipay-line"></use></svg></span></div></div><div style="display:inline-block"><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/qqpay-qrcode.png"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/qqpay-qrcode.png" alt="QQ 支付" title="QQ 支付"></a><div><span style="color:#12B7F5"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-qq-line"></use></svg></span></div></div><div style="display:inline-block"><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/wechatpay-qrcode.jpg"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/wechatpay-qrcode.jpg" alt="微信支付" title="微信支付"></a><div><span style="color:#2DC100"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-wechat-pay-line"></use></svg></span></div></div></div></div><ul class="post-copyright"><li class="post-copyright-author"><strong>Post author: </strong>程海盐</li><li class="post-copyright-link"><strong>Post link: </strong><a href="https://allmainashley.github.io/2020/11/16/Notes/Machine%20Learning/Deep%20Learning%20in%20NLP/" title="Deep Learning in NLP">https://allmainashley.github.io/2020/11/16/Notes/Machine%20Learning/Deep%20Learning%20in%20NLP/</a></li><li class="post-copyright-license"><strong>Copyright Notice: </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener" title="CC BY-NC-SA 4.0 "><svg class="icon"><use xlink:href="#icon-creative-commons-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-by-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-nc-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-sa-line"></use></svg></a> unless otherwise stated.</li></ul></section></article><div class="post-nav"><div class="post-nav-item"><a class="post-nav-prev" href="/2020/12/26/Notes/OpenCV/OpenCV%20Learning%20Notes/" rel="prev" title="OpenCV Learning Notes"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-left-s-line"></use></svg><span class="post-nav-text">OpenCV Learning Notes</span></a></div><div class="post-nav-item"><a class="post-nav-next" href="/2020/10/25/Notes/Machine%20Learning/Data%20Preprocessing%20Tips/" rel="next" title="Matplotlib、Pandas常用函数"><span class="post-nav-text">Matplotlib、Pandas常用函数</span><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-right-s-line"></use></svg></a></div></div></div><div id="comment"><div class="comment-tooltip text-center"><span>若您无 GitHub 账号，可直接在下方匿名评论。</span><br><span>若您想及时得到回复提醒，建议跳转 GitHub Issues 评论。</span><br><span>若没有本文 Issue，您可以使用 Comment 模版新建。</span><br><a class="hty-button hty-button--raised" id="github-issues" target="_blank" rel="noopener" href="https://github.com/AllMainAshley/AllMainAshley.github.io/issues?q=is:issue+Deep Learning in NLP">GitHub Issues</a></div><div id="valine-container"></div><script src="https://cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script><script>function initValine() {
+  const valineConfig = {"enable":true,"appId":"duRJqtj9W4MnlhHrkhx0O3vb-gzGzoHsz","appKey":"7GxBY57ustzpxvpwNr39XneW","placeholder":"I want to say...","avatar":null,"pageSize":10,"visitor":false,"highlight":true,"recordIP":false,"enableQQ":true,"el":"#valine-container","lang":"en"}
+  valineConfig.path = window.location.pathname
+  new Valine(valineConfig)
+}
+setTimeout(initValine, 800)</script></div></main><footer class="sidebar-translate" id="footer"><div class="copyright"><span>&copy; 2020 – 2021 </span><span class="with-love" id="animate"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-cloud-line"></use></svg></span><span class="author"> 程海盐</span></div><div class="powered"><span>Powered by <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> v5.2.0</span><span class="footer-separator">|</span><span>Theme - <a rel="noopener" href="https://github.com/YunYouJun/hexo-theme-yun" target="_blank"><span>Yun</span></a> v1.3.0</span></div><div class="live_time"><span>本博客已萌萌哒地运行</span><span id="display_live_time"></span><span class="moe-text">(●'◡'●)</span><script>function blog_live_time() {
+  window.setTimeout(blog_live_time, 1000);
+  const start = new Date('2020-05-10T00:00:00');
+  const now = new Date();
+  const timeDiff = (now.getTime() - start.getTime());
+  const msPerMinute = 60 * 1000;
+  const msPerHour = 60 * msPerMinute;
+  const msPerDay = 24 * msPerHour;
+  const passDay = Math.floor(timeDiff / msPerDay);
+  const passHour = Math.floor((timeDiff % msPerDay) / 60 / 60 / 1000);
+  const passMinute = Math.floor((timeDiff % msPerHour) / 60 / 1000);
+  const passSecond = Math.floor((timeDiff % msPerMinute) / 1000);
+  display_live_time.innerHTML = " " + passDay + " 天 " + passHour + " 小时 " + passMinute + " 分 " + passSecond + " 秒";
+}
+blog_live_time();
+</script></div></footer><a class="hty-icon-button" id="goUp" aria-label="back-to-top" href="#"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-up-s-line"></use></svg><svg class="progress-circle-container" viewBox="0 0 100 100"><circle class="progress-circle" id="progressCircle" cx="50" cy="50" r="48" fill="none" stroke="#0078E7" stroke-width="2" stroke-linecap="round"></circle></svg></a><a class="popup-trigger hty-icon-button icon-search" id="search" href="javascript:;" title="Search"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-search-line"></use></svg></span></a><script>window.addEventListener("DOMContentLoaded", () => {
+  // Handle and trigger popup window
+  document.querySelector(".popup-trigger").addEventListener("click", () => {
+    document.querySelector(".popup").classList.add("show");
+    setTimeout(() => {
+      document.querySelector(".search-input").focus();
+    }, 100);
+  });
+
+  // Monitor main search box
+  const onPopupClose = () => {
+    document.querySelector(".popup").classList.remove("show");
+  };
+
+  document.querySelector(".popup-btn-close").addEventListener("click", () => {
+    onPopupClose();
+  });
+
+  window.addEventListener("keyup", event => {
+    if (event.key === "Escape") {
+      onPopupClose();
+    }
+  });
+});
+</script><script src="/js/search/local-search.js" defer></script><div class="popup search-popup"><div class="search-header"><span class="popup-btn-close close-icon hty-icon-button"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-close-line"></use></svg></span></div><div class="search-input-container"><input class="search-input" id="local-search-input" type="text" placeholder="Searching..." value=""></div><div id="local-search-result"></div></div></div><script defer src="/js/utils.js"></script><script defer src="/js/hexo-theme-yun.js"></script></body></html>
