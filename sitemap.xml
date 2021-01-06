@@ -179,7 +179,28 @@
   </url>
   
   <url>
+    <loc>https://allmainashley.github.io/tags/The-Missing-Semester-of-Your-CS-Education/</loc>
+    <lastmod>2021-01-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://allmainashley.github.io/tags/Shell/</loc>
+    <lastmod>2021-01-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://allmainashley.github.io/tags/Tips/</loc>
+    <lastmod>2021-01-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://allmainashley.github.io/tags/Qv2ray/</loc>
     <lastmod>2021-01-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -235,27 +256,6 @@
   </url>
   
   <url>
-    <loc>https://allmainashley.github.io/tags/The-Missing-Semester-of-Your-CS-Education/</loc>
-    <lastmod>2021-01-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://allmainashley.github.io/tags/Shell/</loc>
-    <lastmod>2021-01-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://allmainashley.github.io/tags/Qv2ray/</loc>
-    <lastmod>2021-01-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://allmainashley.github.io/tags/Materials/</loc>
     <lastmod>2021-01-06</lastmod>
     <changefreq>daily</changefreq>
@@ -279,7 +279,21 @@
   </url>
   
   <url>
+    <loc>https://allmainashley.github.io/categories/Notes/Linux/</loc>
+    <lastmod>2021-01-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://allmainashley.github.io/categories/Notes/Machine-Learning/</loc>
+    <lastmod>2021-01-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://allmainashley.github.io/categories/Notes/MySQL/</loc>
     <lastmod>2021-01-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -293,21 +307,7 @@
   </url>
   
   <url>
-    <loc>https://allmainashley.github.io/categories/Notes/Linux/</loc>
-    <lastmod>2021-01-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://allmainashley.github.io/categories/Notes/OpenCV/</loc>
-    <lastmod>2021-01-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://allmainashley.github.io/categories/Notes/MySQL/</loc>
     <lastmod>2021-01-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
