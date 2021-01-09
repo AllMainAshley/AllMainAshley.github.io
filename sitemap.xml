@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://allmainashley.github.io/2021/01/09/Notes/Machine%20Learning/NLP%20Relevant%20Knowledge/</loc>
+    
+    <lastmod>2021-01-09</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://allmainashley.github.io/2021/01/07/Notes/Machine%20Learning/Analysis%20of%20Questions%20and%20Answers%20in%20major%20NLP%20Datasets/</loc>
     
     <lastmod>2021-01-07</lastmod>
@@ -179,14 +186,14 @@
 
   
   <url>
-    <loc>https://allmainashley.github.io/tags/Tips/</loc>
+    <loc>https://allmainashley.github.io/tags/Tensorflow/</loc>
     <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://allmainashley.github.io/tags/Tensorflow/</loc>
+    <loc>https://allmainashley.github.io/tags/Tips/</loc>
     <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -215,6 +222,13 @@
   
   <url>
     <loc>https://allmainashley.github.io/tags/Dataset-Analysis/</loc>
+    <lastmod>2021-01-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://allmainashley.github.io/tags/NLP/</loc>
     <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -256,13 +270,6 @@
   </url>
   
   <url>
-    <loc>https://allmainashley.github.io/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</loc>
-    <lastmod>2021-01-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://allmainashley.github.io/tags/Octave/</loc>
     <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
@@ -270,14 +277,14 @@
   </url>
   
   <url>
-    <loc>https://allmainashley.github.io/tags/Materials/</loc>
+    <loc>https://allmainashley.github.io/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</loc>
     <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://allmainashley.github.io/tags/NLP/</loc>
+    <loc>https://allmainashley.github.io/tags/Materials/</loc>
     <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

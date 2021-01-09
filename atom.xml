@@ -6,7 +6,7 @@
   <link href="https://allmainashley.github.io/atom.xml" rel="self"/>
   
   <link href="https://allmainashley.github.io/"/>
-  <updated>2021-01-07T14:12:36.007Z</updated>
+  <updated>2021-01-09T13:07:16.302Z</updated>
   <id>https://allmainashley.github.io/</id>
   
   <author>
@@ -15,6 +15,19 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>NLP Relevant Knowledge</title>
+    <link href="https://allmainashley.github.io/2021/01/09/Notes/Machine%20Learning/NLP%20Relevant%20Knowledge/"/>
+    <id>https://allmainashley.github.io/2021/01/09/Notes/Machine%20Learning/NLP%20Relevant%20Knowledge/</id>
+    <published>2021-01-09T13:07:16.302Z</published>
+    <updated>2021-01-09T13:07:16.302Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Analysis of Questions and Answers in major NLP Datasets</title>
@@ -37,6 +50,8 @@
     
     <category term="Dataset Analysis" scheme="https://allmainashley.github.io/tags/Dataset-Analysis/"/>
     
+    <category term="NLP" scheme="https://allmainashley.github.io/tags/NLP/"/>
+    
   </entry>
   
   <entry>
@@ -58,6 +73,8 @@
     
     <category term="Machine Learning" scheme="https://allmainashley.github.io/categories/Notes/Machine-Learning/"/>
     
+    
+    <category term="NLP" scheme="https://allmainashley.github.io/tags/NLP/"/>
     
     <category term="MxNet" scheme="https://allmainashley.github.io/tags/MxNet/"/>
     
