@@ -58,13 +58,6 @@
   </url>
   
   <url>
-    <loc>https://allmainashley.github.io/2020/10/25/Notes/Machine%20Learning/Data%20Preprocessing%20Tips/</loc>
-    
-    <lastmod>2020-10-25</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://allmainashley.github.io/2020/10/22/Notes/Machine%20Learning/Genetic%20Algorithms/</loc>
     
     <lastmod>2020-10-22</lastmod>
@@ -183,6 +176,13 @@
     
   </url>
   
+  <url>
+    <loc>https://allmainashley.github.io/2019/04/28/Notes/Machine%20Learning/Data%20Preprocessing%20by%20Matplotlib%20and%20Pandas/</loc>
+    
+    <lastmod>2019-05-06</lastmod>
+    
+  </url>
+  
 
   <url>
     <loc>https://allmainashley.github.io/</loc>
@@ -193,13 +193,6 @@
 
   
   <url>
-    <loc>https://allmainashley.github.io/tags/Tips/</loc>
-    <lastmod>2021-01-15</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://allmainashley.github.io/tags/Tensorflow/</loc>
     <lastmod>2021-01-15</lastmod>
     <changefreq>daily</changefreq>
@@ -207,7 +200,7 @@
   </url>
   
   <url>
-    <loc>https://allmainashley.github.io/tags/Qv2ray/</loc>
+    <loc>https://allmainashley.github.io/tags/Tips/</loc>
     <lastmod>2021-01-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -222,6 +215,13 @@
   
   <url>
     <loc>https://allmainashley.github.io/tags/Shell/</loc>
+    <lastmod>2021-01-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://allmainashley.github.io/tags/Qv2ray/</loc>
     <lastmod>2021-01-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -335,14 +335,14 @@
   </url>
   
   <url>
-    <loc>https://allmainashley.github.io/categories/Notes/Algorithms/</loc>
+    <loc>https://allmainashley.github.io/categories/Notes/MySQL/</loc>
     <lastmod>2021-01-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://allmainashley.github.io/categories/Notes/MySQL/</loc>
+    <loc>https://allmainashley.github.io/categories/Notes/Algorithms/</loc>
     <lastmod>2021-01-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
