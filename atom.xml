@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Ashley</title>
+  <title>Hexo</title>
   
-  <subtitle>Face to new life and SAY HEY.</subtitle>
+  
   <link href="https://allmainashley.github.io/atom.xml" rel="self"/>
   
   <link href="https://allmainashley.github.io/"/>
@@ -10,7 +10,7 @@
   <id>https://allmainashley.github.io/</id>
   
   <author>
-    <name>程海盐</name>
+    <name>John Doe</name>
     
   </author>
   
@@ -205,7 +205,7 @@
     <link href="https://allmainashley.github.io/2020/09/30/Notes/MySQL/MYSQL%20tips/"/>
     <id>https://allmainashley.github.io/2020/09/30/Notes/MySQL/MYSQL%20tips/</id>
     <published>2020-09-29T16:15:53.057Z</published>
-    <updated>2021-01-16T09:04:17.366Z</updated>
+    <updated>2021-01-16T10:26:47.551Z</updated>
     
     <content type="html"><![CDATA[<h1 id="被MYSQL日常虐到满地打滚"><a href="#被MYSQL日常虐到满地打滚" class="headerlink" title="被MYSQL日常虐到满地打滚"></a>被MYSQL日常虐到满地打滚</h1><ul><li><input checked="" disabled="" type="checkbox"> <a href="https://blog.csdn.net/exception_sir/article/details/82111014">how to uodate your MYSQL password</a>：but I stil dont’know why the first two method doesn’t work</li><li><input checked="" disabled="" type="checkbox"> <a href="https://www.cnblogs.com/microcat/p/6610963.html">how to start and close MYSQL</a></li><li><input checked="" disabled="" type="checkbox"> 每个语句要加分号</li><li><input disabled="" type="checkbox"> <a href="">I can’t find <strong><em>my.ini</em></strong> config file</a></li></ul><blockquote><p><code>(用管理员权限打开cmd) cd C:\Program Files\MySQL\MySQL Server 8.0\bin  mysqld --console　(不知道为啥net start mysql没用)</code></p><p>然后打开mysql命令行</p><p><code>ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;123456&#39;;(不知道为啥前两种没用)</code></p></blockquote><ul><li><input checked="" disabled="" type="checkbox"> my.ini</li></ul><blockquote><p>“C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe” “–defaults-file=C:\ProgramData\MySQL\MySQL Server 8.0\my.ini” “-uroot” “-p” “–default-character-set=utf8mb4”</p></blockquote><ul><li><input checked="" disabled="" type="checkbox"> 数据连接</li></ul><blockquote><p><code>private String dbUrl=&quot;jdbc:mysql://localhost:3306/system?useUnicode=true&amp;characterEncoding=utf8&quot;;   //数据库连接地址 //数据库名称：system 指定Unicode编码 字符集utf8 private String dbUser=&quot;root&quot;; private String dbPassword=&quot;root&quot;; private String jdbcName= &quot;com.mysql.cj.jdbc.Driver&quot;; //去找mysql-connect包 public Connection getCon()&#123;     try&#123;         Class.forName(jdbcName);    //找到jdbc包     &#125; catch (ClassNotFoundException e) &#123;         e.printStackTrace();     &#125;     Connection conn=null;     try&#123;         conn= DriverManager.getConnection(dbUrl,dbUser,dbPassword)     &#125; catch (SQLException throwables) &#123;         throwables.printStackTrace();     &#125;     return conn;    //返回连接的对象 &#125;</code></p></blockquote><ul><li><input checked="" disabled="" type="checkbox"> PreparedStatement</li></ul>]]></content>
     
