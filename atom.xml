@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>Ashley</title>
   
-  
+  <subtitle>Face to new life and SAY HEY.</subtitle>
   <link href="https://allmainashley.github.io/atom.xml" rel="self"/>
   
   <link href="https://allmainashley.github.io/"/>
@@ -10,7 +10,7 @@
   <id>https://allmainashley.github.io/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>程海盐</name>
     
   </author>
   
