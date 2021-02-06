@@ -200,21 +200,14 @@
 
   
   <url>
-    <loc>https://allmainashley.github.io/tags/Tips/</loc>
-    <lastmod>2021-02-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://allmainashley.github.io/tags/Qv2ray/</loc>
-    <lastmod>2021-02-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://allmainashley.github.io/tags/Tensorflow/</loc>
+    <lastmod>2021-02-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://allmainashley.github.io/tags/Tips/</loc>
     <lastmod>2021-02-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -249,27 +242,6 @@
   </url>
   
   <url>
-    <loc>https://allmainashley.github.io/tags/The-Missing-Semester-of-Your-CS-Education/</loc>
-    <lastmod>2021-02-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://allmainashley.github.io/tags/Shell/</loc>
-    <lastmod>2021-02-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://allmainashley.github.io/tags/%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2021-02-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://allmainashley.github.io/tags/Matplotlib/</loc>
     <lastmod>2021-02-06</lastmod>
     <changefreq>daily</changefreq>
@@ -284,7 +256,21 @@
   </url>
   
   <url>
+    <loc>https://allmainashley.github.io/tags/%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2021-02-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://allmainashley.github.io/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</loc>
+    <lastmod>2021-02-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://allmainashley.github.io/tags/Octave/</loc>
     <lastmod>2021-02-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -305,7 +291,21 @@
   </url>
   
   <url>
-    <loc>https://allmainashley.github.io/tags/Octave/</loc>
+    <loc>https://allmainashley.github.io/tags/Qv2ray/</loc>
+    <lastmod>2021-02-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://allmainashley.github.io/tags/The-Missing-Semester-of-Your-CS-Education/</loc>
+    <lastmod>2021-02-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://allmainashley.github.io/tags/Shell/</loc>
     <lastmod>2021-02-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -349,13 +349,6 @@
   </url>
   
   <url>
-    <loc>https://allmainashley.github.io/categories/Notes/Linux/</loc>
-    <lastmod>2021-02-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://allmainashley.github.io/categories/Notes/Algorithms/</loc>
     <lastmod>2021-02-06</lastmod>
     <changefreq>daily</changefreq>
@@ -363,7 +356,7 @@
   </url>
   
   <url>
-    <loc>https://allmainashley.github.io/categories/Notes/OpenCV/</loc>
+    <loc>https://allmainashley.github.io/categories/Notes/Linux/</loc>
     <lastmod>2021-02-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -371,6 +364,13 @@
   
   <url>
     <loc>https://allmainashley.github.io/categories/Notes/MySQL/</loc>
+    <lastmod>2021-02-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://allmainashley.github.io/categories/Notes/OpenCV/</loc>
     <lastmod>2021-02-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
