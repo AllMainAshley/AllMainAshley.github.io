@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://allmainashley.github.io/about/index.html</loc>
+    
+    <lastmod>2021-06-18</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://allmainashley.github.io/about/site.html</loc>
     
     <lastmod>2021-06-18</lastmod>
@@ -82,13 +89,6 @@
     <loc>https://allmainashley.github.io/2020/09/30/Notes/Machine%20Learning/Tensorflow%20Nature%20Language%20Processing/</loc>
     
     <lastmod>2020-12-26</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://allmainashley.github.io/about/index.html</loc>
-    
-    <lastmod>2020-12-02</lastmod>
     
   </url>
   
@@ -197,13 +197,6 @@
     
   </url>
   
-  <url>
-    <loc>https://allmainashley.github.io/about/tets.html</loc>
-    
-    <lastmod>2018-01-30</lastmod>
-    
-  </url>
-  
 
   <url>
     <loc>https://allmainashley.github.io/</loc>
@@ -228,13 +221,6 @@
   </url>
   
   <url>
-    <loc>https://allmainashley.github.io/tags/Qv2ray/</loc>
-    <lastmod>2021-06-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://allmainashley.github.io/tags/Auto-Reboot/</loc>
     <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
@@ -250,6 +236,13 @@
   
   <url>
     <loc>https://allmainashley.github.io/tags/Shell/</loc>
+    <lastmod>2021-06-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://allmainashley.github.io/tags/Qv2ray/</loc>
     <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -370,14 +363,14 @@
   </url>
   
   <url>
-    <loc>https://allmainashley.github.io/categories/Notes/Machine-Learning/</loc>
+    <loc>https://allmainashley.github.io/categories/Notes/Linux/</loc>
     <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://allmainashley.github.io/categories/Notes/Linux/</loc>
+    <loc>https://allmainashley.github.io/categories/Notes/Machine-Learning/</loc>
     <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -391,14 +384,14 @@
   </url>
   
   <url>
-    <loc>https://allmainashley.github.io/categories/Notes/MySQL/</loc>
+    <loc>https://allmainashley.github.io/categories/Notes/OpenCV/</loc>
     <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://allmainashley.github.io/categories/Notes/OpenCV/</loc>
+    <loc>https://allmainashley.github.io/categories/Notes/MySQL/</loc>
     <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
