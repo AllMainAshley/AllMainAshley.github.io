@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://allmainashley.github.io/about/site.html</loc>
+    
+    <lastmod>2021-06-18</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://allmainashley.github.io/2021/02/06/Notes/Machine%20Learning/Naive%20Bayes%20in%20Python/</loc>
     
     <lastmod>2021-02-17</lastmod>
@@ -128,13 +135,6 @@
   </url>
   
   <url>
-    <loc>https://allmainashley.github.io/about/site.html</loc>
-    
-    <lastmod>2020-08-10</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://allmainashley.github.io/catch-cat/index.html</loc>
     
     <lastmod>2020-08-10</lastmod>
@@ -200,7 +200,7 @@
 
   <url>
     <loc>https://allmainashley.github.io/</loc>
-    <lastmod>2021-02-17</lastmod>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -208,140 +208,140 @@
   
   <url>
     <loc>https://allmainashley.github.io/tags/Tensorflow/</loc>
-    <lastmod>2021-02-17</lastmod>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://allmainashley.github.io/tags/Tips/</loc>
-    <lastmod>2021-02-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://allmainashley.github.io/tags/The-Missing-Semester-of-Your-CS-Education/</loc>
-    <lastmod>2021-02-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://allmainashley.github.io/tags/Shell/</loc>
-    <lastmod>2021-02-17</lastmod>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://allmainashley.github.io/tags/Auto-Reboot/</loc>
-    <lastmod>2021-02-17</lastmod>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://allmainashley.github.io/tags/Qv2ray/</loc>
-    <lastmod>2021-02-17</lastmod>
+    <lastmod>2021-06-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://allmainashley.github.io/tags/The-Missing-Semester-of-Your-CS-Education/</loc>
+    <lastmod>2021-06-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://allmainashley.github.io/tags/Shell/</loc>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://allmainashley.github.io/tags/Dataset-Analysis/</loc>
-    <lastmod>2021-02-17</lastmod>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://allmainashley.github.io/tags/NLP/</loc>
-    <lastmod>2021-02-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://allmainashley.github.io/tags/MxNet/</loc>
-    <lastmod>2021-02-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://allmainashley.github.io/tags/Colab/</loc>
-    <lastmod>2021-02-17</lastmod>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://allmainashley.github.io/tags/Matplotlib/</loc>
-    <lastmod>2021-02-17</lastmod>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://allmainashley.github.io/tags/Pandas/</loc>
-    <lastmod>2021-02-17</lastmod>
+    <lastmod>2021-06-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://allmainashley.github.io/tags/MxNet/</loc>
+    <lastmod>2021-06-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://allmainashley.github.io/tags/Colab/</loc>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://allmainashley.github.io/tags/%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2021-02-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://allmainashley.github.io/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</loc>
-    <lastmod>2021-02-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://allmainashley.github.io/tags/Octave/</loc>
-    <lastmod>2021-02-17</lastmod>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://allmainashley.github.io/tags/Statistics/</loc>
-    <lastmod>2021-02-17</lastmod>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://allmainashley.github.io/tags/Naive-Bayes/</loc>
-    <lastmod>2021-02-17</lastmod>
+    <lastmod>2021-06-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://allmainashley.github.io/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</loc>
+    <lastmod>2021-06-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://allmainashley.github.io/tags/Octave/</loc>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://allmainashley.github.io/tags/OpenCV/</loc>
-    <lastmod>2021-02-17</lastmod>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://allmainashley.github.io/tags/Materials/</loc>
-    <lastmod>2021-02-17</lastmod>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://allmainashley.github.io/tags/Spacy/</loc>
-    <lastmod>2021-02-17</lastmod>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -350,63 +350,63 @@
   
   <url>
     <loc>https://allmainashley.github.io/categories/Notes/</loc>
-    <lastmod>2021-02-17</lastmod>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://allmainashley.github.io/categories/System/</loc>
-    <lastmod>2021-02-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://allmainashley.github.io/categories/Notes/Machine-Learning/</loc>
-    <lastmod>2021-02-17</lastmod>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://allmainashley.github.io/categories/Notes/Linux/</loc>
-    <lastmod>2021-02-17</lastmod>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://allmainashley.github.io/categories/Notes/Algorithms/</loc>
-    <lastmod>2021-02-17</lastmod>
+    <loc>https://allmainashley.github.io/categories/Notes/Machine-Learning/</loc>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://allmainashley.github.io/categories/Notes/MySQL/</loc>
-    <lastmod>2021-02-17</lastmod>
+    <lastmod>2021-06-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://allmainashley.github.io/categories/Notes/Algorithms/</loc>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://allmainashley.github.io/categories/Notes/OpenCV/</loc>
-    <lastmod>2021-02-17</lastmod>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://allmainashley.github.io/categories/Tutorial/</loc>
-    <lastmod>2021-02-17</lastmod>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://allmainashley.github.io/categories/Tutorial/Machine-Learning/</loc>
-    <lastmod>2021-02-17</lastmod>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
