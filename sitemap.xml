@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://allmainashley.github.io/links/index.html</loc>
+    
+    <lastmod>2021-06-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://allmainashley.github.io/links/indexAshley.html</loc>
+    
+    <lastmod>2021-06-18</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://allmainashley.github.io/about/index.html</loc>
     
     <lastmod>2021-06-18</lastmod>
@@ -156,13 +170,6 @@
   </url>
   
   <url>
-    <loc>https://allmainashley.github.io/links/index.html</loc>
-    
-    <lastmod>2020-06-16</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://allmainashley.github.io/tags/index.html</loc>
     
     <lastmod>2020-05-10</lastmod>
@@ -228,6 +235,13 @@
   </url>
   
   <url>
+    <loc>https://allmainashley.github.io/tags/Qv2ray/</loc>
+    <lastmod>2021-06-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://allmainashley.github.io/tags/The-Missing-Semester-of-Your-CS-Education/</loc>
     <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
@@ -236,13 +250,6 @@
   
   <url>
     <loc>https://allmainashley.github.io/tags/Shell/</loc>
-    <lastmod>2021-06-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://allmainashley.github.io/tags/Qv2ray/</loc>
     <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
