@@ -6,7 +6,7 @@
   <link href="https://allmainashley.github.io/atom.xml" rel="self"/>
   
   <link href="https://allmainashley.github.io/"/>
-  <updated>2021-07-15T02:40:49.785Z</updated>
+  <updated>2021-07-15T02:44:44.088Z</updated>
   <id>https://allmainashley.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://allmainashley.github.io/2021/07/14/Notes/Utils/Commonly-Used-Tools/"/>
     <id>https://allmainashley.github.io/2021/07/14/Notes/Utils/Commonly-Used-Tools/</id>
     <published>2021-07-13T23:19:58.802Z</published>
-    <updated>2021-07-15T02:40:49.785Z</updated>
+    <updated>2021-07-15T02:44:44.088Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Websites"><a href="#Websites" class="headerlink" title="Websites"></a>Websites</h1><h2 id="常用英英词典："><a href="#常用英英词典：" class="headerlink" title="常用英英词典："></a>常用英英词典：</h2><p><a href="https://www.urbandictionary.com/">https://www.urbandictionary.com/</a><br><a href="https://www.thefreedictionary.com/">https://www.thefreedictionary.com/</a><br><a href="https://www.merriam-webster.com/">https://www.merriam-webster.com/</a><br><a href="https://www.collinsdictionary.com/dictionary/english">https://www.collinsdictionary.com/dictionary/english</a><br><a href="https://dictionary.cambridge.org/">https://dictionary.cambridge.org/</a><br><a href="https://www.ldoceonline.com/">https://www.ldoceonline.com/</a></p><h2 id="用法数据库："><a href="#用法数据库：" class="headerlink" title="用法数据库："></a>用法数据库：</h2><p><a href="https://ludwig.guru/">https://ludwig.guru/</a><br><a href="https://cn.linguee.com/">https://cn.linguee.com/</a><br><a href="https://books.google.com/ngrams">https://books.google.com/ngrams</a></p><h2 id="电影美剧及字幕下载："><a href="#电影美剧及字幕下载：" class="headerlink" title="电影美剧及字幕下载："></a>电影美剧及字幕下载：</h2><p><a href="https://1337x.to/home/">https://1337x.to/home/</a><br><a href="https://www.magnetdl.com/">https://www.magnetdl.com/</a><br><a href="https://www.meijutt.tv/">https://www.meijutt.tv/</a><br><a href="https://yts.ag/">https://yts.ag/</a><br><a href="https://pahe.in/">https://pahe.in/</a><br><a href="https://subscene.com/subtitles/searchbytitle">https://subscene.com/subtitles/searchbytitle</a><br><a href="https://yanghuanyu.com/">https://yanghuanyu.com/</a> 皮皮虾</p><h2 id="电子书下载："><a href="#电子书下载：" class="headerlink" title="电子书下载："></a>电子书下载：</h2><p><a href="http://libgen.li/">http://libgen.li/</a><br><a href="https://www.owleyes.org/">https://www.owleyes.org/</a><br><a href="http://shu.ziyuandi.cn/">http://shu.ziyuandi.cn/</a><br><a href="https://1lib.us/">https://1lib.us/</a> (z-library)<br><a href="https://emagazines.site/te_2020">https://emagazines.site/te_2020</a> 经济学人，纽约客下载</p><h2 id="博客类"><a href="#博客类" class="headerlink" title="博客类:"></a>博客类:</h2><p><a href="https://www.tjxz.cc/">https://www.tjxz.cc/</a> 田间小站<br><a href="https://ieltsrewind.com/">https://ieltsrewind.com/</a> 雅思复盘考题<br><a href="https://www.ieltsday.com/">https://www.ieltsday.com/</a> 开源雅思<br><a href="http://www.ai-start.com/">http://www.ai-start.com/</a> 机器学习(致力于人工智能（AI）方面的课程的翻译、笔记分享等)<br><a href="http://www.huaxiaozhuan.com/">http://www.huaxiaozhuan.com/</a> AI算法工程师手册<br><a href="http://www.ruanyifeng.com/home.html">http://www.ruanyifeng.com/home.html</a> 阮一峰</p><h1 id="Tricks"><a href="#Tricks" class="headerlink" title="Tricks"></a>Tricks</h1><h2 id="ffmpeg"><a href="#ffmpeg" class="headerlink" title="ffmpeg"></a>ffmpeg</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;d E:&#x2F;ffmpeg&#x2F;bin</span><br><span class="line">声音视频合并</span><br><span class="line">ffmpeg -i video.m4s -i audio.m4s -c:v copy -strict experimental vedio.mp4</span><br><span class="line">多个视频文件合并</span><br><span class="line">ffmpeg -i &quot;concat:1.mp4|2.mp4|3.mp4|4.mp4|5.mp4|6.mp4|7.mp4|8.mp4|9.mp4|10.mp4&quot; -c copy Output.mp4</span><br><span class="line">转码成h.264</span><br><span class="line">ffmpeg -i input.mp4 -c:v libx264 output.mp4</span><br></pre></td></tr></table></figure><h2 id="快捷键-HotKey"><a href="#快捷键-HotKey" class="headerlink" title="快捷键 HotKey"></a>快捷键 HotKey</h2><p><a href="https://www.cnblogs.com/hongdada/p/9776547.html">https://www.cnblogs.com/hongdada/p/9776547.html</a> Typora快捷键</p><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p><a href="https://www.processon.com/diagrams">https://www.processon.com/diagrams</a> 思维导图<br><a href="https://www.geogebra.org/3d?lang=zh_CN">https://www.geogebra.org/3d?lang=zh_CN</a> 3D计算器</p>]]></content>
     
@@ -33,6 +33,12 @@
     
     
     
+    <category term="Notes" scheme="https://allmainashley.github.io/categories/Notes/"/>
+    
+    <category term="Utils" scheme="https://allmainashley.github.io/categories/Notes/Utils/"/>
+    
+    
+    <category term="Tools" scheme="https://allmainashley.github.io/tags/Tools/"/>
     
   </entry>
   
